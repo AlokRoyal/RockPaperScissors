@@ -1,21 +1,33 @@
 # Rock Paper Scissors
 
-A terminal-based Python game: play rounds of rock, paper, scissors against the computer. The match ends when either side reaches 10 points.
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![Game](https://img.shields.io/badge/type-terminal%20game-lightgrey)
+
+A terminal game where you play rock, paper, scissors against the computer. The first side to score 10 points wins.
 
 ## Gameplay
 
-The program accepts a player move, generates the computer's move, determines the round result, and updates the score. A tie leaves the score unchanged. Play continues until someone reaches the target, then the final result is reported.
+Each round collects a player move, generates a computer move, compares both choices, and updates the score. A tie does not award a point. The match continues until a player reaches the target score.
 
-## Run
+## Architecture
 
-Install Python 3, then start the game from a terminal:
+Terminal input → move validation/selection → round comparison → score update → next round or match result
+
+The game is a single Python script and uses no network service or external package.
+
+## Start locally
+
+Install Python 3 and launch the script from a terminal:
 
     python RockPaperScissors.py
 
-No third-party packages are listed. The terminal is required for entering moves.
+Follow the prompts to enter a move. Run the command from the repository directory so Python can find the script.
 
-## Project file
+## Project layout
 
-RockPaperScissors.py contains the game loop, input handling, computer selection, round outcome checks, and score tracking.
+- RockPaperScissors.py — game loop, input, computer choice, round result, and score tracking
+- README.md — project and run instructions
 
-This is a command-line learning project. It has no graphical interface, network connection, or saved match history.
+## Limitations
+
+The game is command-line only. It does not include a graphical interface, saved match history, online multiplayer, or automated tests. No license file is listed in the repository.
